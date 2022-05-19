@@ -68,6 +68,11 @@ export default {
   methods: {
     addUser(user) {
       console.log(user);
+      const id = this.users.length + 1;
+      user = {
+        id,
+        ...user,
+      };
       this.users.push(user);
     },
   },

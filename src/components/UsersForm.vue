@@ -46,9 +46,7 @@
           ></date-picker>
         </div>
 
-        <button type="submit" :disabled="!formIsValid" >
-          Agregar Usuario
-        </button>
+        <button type="submit" :disabled="!formIsValid">Agregar Usuario</button>
       </form>
     </div>
   </div>
@@ -100,14 +98,6 @@ export default {
   },
   methods: {
     submit() {
-      console.log("addUser");
-      console.log({
-        email: this.email,
-        first_name: this.first_name,
-        last_name: this.last_name,
-        age: this.calculateAge,
-      });
-
       this.$emit("addUser", {
         email: this.email,
         first_name: this.first_name,
