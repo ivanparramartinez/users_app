@@ -49,6 +49,19 @@
         <button type="submit">Agregar Usuario</button>
       </form>
     </div>
+    <div class="alert positive">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      Usuario agregado exitosamente
+    </div>
+
+    <div class="alert negative">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      Error al agregar usuario
+    </div>
   </div>
 </template>
 
@@ -110,8 +123,11 @@ export default {
         this.first_name = "";
         this.last_name = "";
         this.fecha_nacimiento = "";
+        document.getElementsByClassName("alert positive")[0].style.display =
+          "block";
       } else {
-        alert("Por favor llena todos los campos");
+        document.getElementsByClassName("alert negative")[0].style.display =
+          "block";
       }
     },
   },
@@ -180,5 +196,36 @@ button:hover {
 
 button:disabled:hover {
   background-color: gray;
+}
+
+.alert {
+  display: none;
+  padding: 20px;
+  border-radius: 0.8rem;
+  color: white;
+  margin: 1rem 0;
+}
+
+.alert.positive {
+  background-color: #009e08;
+}
+
+.alert.negative {
+  background-color: #fa2727;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
 </style>
