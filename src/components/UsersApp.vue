@@ -56,7 +56,6 @@ export default {
         console.error(error);
       })
       .finally(() => {
-        console.log(this.users);
         localStorage.setItem("users", JSON.stringify(this.users));
       });
   },
@@ -67,7 +66,6 @@ export default {
   },
   methods: {
     addUser(user) {
-      console.log(user);
       const id = this.users.length + 1;
       user = {
         id,

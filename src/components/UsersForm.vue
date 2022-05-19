@@ -91,21 +91,13 @@ export default {
     },
     calculateAge() {
       const today = new Date();
-      console.log(this.fecha_nacimiento);
       const birthDate = new Date(this.fecha_nacimiento);
-      console.log(birthDate);
       let age = today.getFullYear() - birthDate.getFullYear();
       const m = today.getMonth() - birthDate.getMonth();
       if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
       }
-      console.log(age);
       return age;
-    },
-  },
-  watch: {
-    date(newVal) {
-      console.log(newVal);
     },
   },
   methods: {
