@@ -12,7 +12,7 @@ El arreglo de usuarios se mantiene en el localStorage.
 El sitio es responsive. 
 
 Se puede ver en vivo en la siguiente dirección: 
-[a link](https://thunderous-bavarois-5cb550.netlify.app)
+[Users App on Netlify](https://thunderous-bavarois-5cb550.netlify.app)
 
 ## Funcionamiento al agregar usuarios
 
