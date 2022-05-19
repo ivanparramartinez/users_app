@@ -88,9 +88,9 @@ export default {
 
 .title {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 0;
-  margin: 0;
+  margin: 2rem 0;
 }
 
 .content {
